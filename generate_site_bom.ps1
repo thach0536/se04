@@ -68,22 +68,22 @@ function Get-HtmlTemplate ($Title, $Content) {
 }
 
 $Products = @(
-    @{id="casual_tshirt"; name="頂級白色T恤"; category="casual"; price="$45"; img="assets/casual_tshirt.png"},
-    @{id="casual_jeans"; name="經典藍色牛仔褲"; category="casual"; price="$85"; img="assets/casual_jeans.png"},
-    @{id="casual_hoodie"; name="百搭灰色連帽衫"; category="casual"; price="$70"; img="assets/casual_hoodie.png"},
-    @{id="casual_sneakers"; name="極簡白色運動鞋"; category="casual"; price="$120"; img="assets/casual_sneakers.png"},
-    @{id="formal_suit"; name="經典黑色西裝"; category="formal"; price="$450"; img="assets/formal_suit.png"},
-    @{id="formal_shirt"; name="修身白色襯衫"; category="formal"; price="$90"; img="assets/formal_shirt.png"},
-    @{id="formal_tie"; name="純絲編織領帶"; category="formal"; price="$45"; img="assets/formal_tie.png"},
-    @{id="formal_shoes"; name="經典牛津皮鞋"; category="formal"; price="$180"; img="assets/formal_shoes.png"},
-    @{id="jewelry_watch"; name="計時銀色手錶"; category="jewelry"; price="$250"; img="assets/jewelry_watch.png"},
-    @{id="jewelry_bracelet"; name="銀色鍊條手環"; category="jewelry"; price="$75"; img="assets/jewelry_bracelet.png"},
-    @{id="jewelry_ring"; name="極簡銀色戒指"; category="jewelry"; price="$60"; img="assets/jewelry_ring.png"},
-    @{id="jewelry_cufflinks"; name="雕花袖扣"; category="jewelry"; price="$55"; img="assets/jewelry_cufflinks.png"},
-    @{id="accessories_belt"; name="全粒面真皮皮帶"; category="accessories"; price="$65"; img="assets/accessories_belt.png"},
-    @{id="accessories_sunglasses"; name="飛行員太陽眼鏡"; category="accessories"; price="$140"; img="assets/accessories_sunglasses.png"},
-    @{id="others_wallet"; name="雙摺真皮皮夾"; category="others"; price="$80"; img="assets/others_wallet.png"},
-    @{id="others_backpack"; name="都會真皮後背包"; category="others"; price="$210"; img="assets/others_backpack.png"}
+    @{id="casual_tshirt"; name="頂級白色T恤"; category="casual"; price='$45'; img="assets/casual_tshirt.png"},
+    @{id="casual_jeans"; name="經典藍色牛仔褲"; category="casual"; price='$85'; img="assets/casual_jeans.png"},
+    @{id="casual_hoodie"; name="百搭灰色連帽衫"; category="casual"; price='$70'; img="assets/casual_hoodie.png"},
+    @{id="casual_sneakers"; name="極簡白色運動鞋"; category="casual"; price='$120'; img="assets/casual_sneakers.png"},
+    @{id="formal_suit"; name="經典黑色西裝"; category="formal"; price='$450'; img="assets/formal_suit.png"},
+    @{id="formal_shirt"; name="修身白色襯衫"; category="formal"; price='$90'; img="assets/formal_shirt.png"},
+    @{id="formal_tie"; name="純絲編織領帶"; category="formal"; price='$45'; img="assets/formal_tie.png"},
+    @{id="formal_shoes"; name="經典牛津皮鞋"; category="formal"; price='$180'; img="assets/formal_shoes.png"},
+    @{id="jewelry_watch"; name="計時銀色手錶"; category="jewelry"; price='$250'; img="assets/jewelry_watch.png"},
+    @{id="jewelry_bracelet"; name="銀色鍊條手環"; category="jewelry"; price='$75'; img="assets/jewelry_bracelet.png"},
+    @{id="jewelry_ring"; name="極簡銀色戒指"; category="jewelry"; price='$60'; img="assets/jewelry_ring.png"},
+    @{id="jewelry_cufflinks"; name="雕花袖扣"; category="jewelry"; price='$55'; img="assets/jewelry_cufflinks.png"},
+    @{id="accessories_belt"; name="全粒面真皮皮帶"; category="accessories"; price='$65'; img="assets/accessories_belt.png"},
+    @{id="accessories_sunglasses"; name="飛行員太陽眼鏡"; category="accessories"; price='$140'; img="assets/accessories_sunglasses.png"},
+    @{id="others_wallet"; name="雙摺真皮皮夾"; category="others"; price='$80'; img="assets/others_wallet.png"},
+    @{id="others_backpack"; name="都會真皮後背包"; category="others"; price='$210'; img="assets/others_backpack.png"}
 )
 
 $Categories = @{
@@ -228,3 +228,4 @@ foreach ($p in $Products) {
 "@
     [System.IO.File]::WriteAllText("$BaseDir\$prodId.html", (Get-HtmlTemplate $pName $ProductContent), [System.Text.Encoding]::UTF8)
 }
+
